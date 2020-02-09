@@ -1,4 +1,7 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './stylesheets/base.scss';
+
+$body-bg: #ffffff;
+$body-color: #ffffff;
 
 .App {
   text-align: center;
@@ -16,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: theme-color-level(primary, -10);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
