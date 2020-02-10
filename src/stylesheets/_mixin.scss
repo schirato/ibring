@@ -98,9 +98,9 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: theme-color("green-medium-button");
-    border-color: theme-color("green-medium-button");
-    color: theme-color("white");
+    background-color: theme-color("green-medium-button") !important;
+    border-color: theme-color("green-medium-button") !important;
+    color: theme-color("white") !important;
   }
 }
 
@@ -117,9 +117,9 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: theme-color("gray-medium");
-    border-color: theme-color("gray-medium");
-    color: theme-color("gray-dark");
+    background-color: theme-color("gray-medium") !important;
+    border-color: theme-color("gray-medium") !important;
+    color: theme-color("gray-dark") !important;
   }
 }
 
@@ -154,9 +154,9 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: transparent;
-    border-color: theme-color("secondary");
-    color: theme-color("secondary");
+    background-color: transparent !important;
+    border-color: theme-color("secondary") !important;
+    color: theme-color("secondary") !important;
   }
 }
 
@@ -171,8 +171,8 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: transparent;
-    border-color: theme-color("gray-dark");
-    color: theme-color("gray-dark");
+    background-color: transparent !important;
+    border-color: theme-color("gray-dark") !important;
+    color: theme-color("gray-dark") !important;
   }
 }

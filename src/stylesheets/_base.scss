@@ -1,6 +1,13 @@
 @import "./typography";
 @import './common';
 
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: 'OpenSans-Regular', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
