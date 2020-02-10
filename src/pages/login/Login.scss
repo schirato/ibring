@@ -1,5 +1,5 @@
-@import '~bootstrap/scss/bootstrap';
 @import '../../stylesheets/common.scss';
+@import '~bootstrap/scss/bootstrap';
 
 .loginPage {
   @include mainContentRulers(79px, 30px, 60px, 30px, 100%);

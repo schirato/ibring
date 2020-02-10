@@ -1,0 +1,13 @@
+@import '../../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.input {
+
+  &__label {
+    @include input-label;
+  }
+
+  &__field {
+    @include input-field;
+  }
+}

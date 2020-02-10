@@ -73,7 +73,7 @@
   @include align-items(center);
   @include justify-content(center);
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px !important;
   font-family: 'OpenSans-Bold', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
   font-style: normal;
   font-weight: bold;
@@ -131,7 +131,7 @@
   @include justify-content(center);
   width: 100%;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 10px !important;
   font-family: 'OpenSans-Bold', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
   font-style: normal;
   font-weight: bold;
@@ -175,4 +175,85 @@
     border-color: theme-color("gray-dark") !important;
     color: theme-color("gray-dark") !important;
   }
+}
+
+// HEADLINE
+
+@mixin h1 {
+  font-family: $estc-font-opensans-regular;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 72px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+@mixin h2 {
+  font-family: $estc-font-opensans-bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+@mixin h3 {
+  font-family: $estc-font-opensans-bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+@mixin h4 {
+  font-family: $estc-font-opensans-bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+@mixin h5 {
+  font-family: $estc-font-opensans-semibold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+// INPUT
+
+@mixin input-label {
+  font-family: $estc-font-opensans-regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: theme-color("gray-darked");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+  padding-left: 5px;
+}
+
+@mixin input-field {
+  height: 46px !important;
+  font-family: $estc-font-opensans-regular;
+  font-style: normal;
+  font-weight: normal !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  color: theme-color("gray-darked") !important;
+  background-color: theme-color("gray-light") !important;
+  border-radius: 10px !important;
+  border: 1px solid theme-color("gray-light") !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
 }

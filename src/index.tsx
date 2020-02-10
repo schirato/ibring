@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import Login from "./pages/login/Login";
+import Cadastro from "./pages/cadastro/Cadastro";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Switch>
       <Route exact path="/" component={App} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/cadastro" component={Cadastro} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
