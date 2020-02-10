@@ -1,27 +1,28 @@
 import React from "react";
+import { InputMaterial } from "../../shared/components";
+import logo from "../../images/logo-ibring.svg";
 import "./Login.scss";
-import { Button } from "react-bootstrap";
 
 const Login = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="primary" className="mr-2">
-          Primary
-        </Button>
-      </header>
-    </div>
+    <section className="loginPage container">
+      <img src={logo} className="loginPage__logo" alt="logo" />
+      <InputMaterial label="E-mail" type="text" />
+      <InputMaterial label="Senha" type="password" />
+      <p className="loginPage__esqueceuSuaSenha">esqueceu sua senha?</p>
+      <button
+        type="button"
+        className="btn btn-primary loginPage__buttonPrimary"
+      >
+        Entrar
+      </button>
+      <button
+        type="button"
+        className="btn btn-outline-primary loginPage__buttonSecondary"
+      >
+        Fazer Cadastro
+      </button>
+    </section>
   );
 };
 

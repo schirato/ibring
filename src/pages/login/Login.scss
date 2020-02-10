@@ -1,0 +1,28 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../stylesheets/common.scss';
+
+.loginPage {
+  @include mainContentRulers(79px, 30px, 60px, 30px, 100%);
+  @include flexbox;
+  @include flex-direction(column);
+
+  &__buttonPrimary {
+    @include button-primary;
+    margin-top: 48px;
+  }
+
+  &__buttonSecondary {
+    @include button-secondary-outline;
+    margin-top: 16px;
+  }
+
+  &__esqueceuSuaSenha {
+    font-family: 'OpenSans-Regular', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: right;
+    color: theme-color("gray-dark");
+  }
+}
