@@ -4,6 +4,7 @@ import "./index.scss";
 import App from "./App";
 import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
+import Confirmacao from "./pages/cadastro/Confirmacao";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path="/" component={App} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/cadastro" component={Cadastro} />
+      <Route exact path="/confirmacao" component={Confirmacao} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
