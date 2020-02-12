@@ -1,0 +1,19 @@
+@import '../../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoHeaderPq {
+  @include mainContentRulers(24px, 30px, 24px, 30px, 100%);
+  @include flexbox;
+  @include align-items(center);
+  background-color: theme-color("primary");
+  border-radius: 0 0 15px 15px;
+
+  &__ico {
+    margin-right: 30px;
+  }
+
+  &__titulo {
+    color: theme-color("white");
+    margin: 0;
+  }
+}

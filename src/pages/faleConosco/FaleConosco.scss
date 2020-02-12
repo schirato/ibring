@@ -1,0 +1,36 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoFaleConosco {
+
+  &__content {
+    @include mainContentRulers(40px, 30px, 40px, 30px, 100%);
+
+    &__label {
+      @include flexbox;
+      @include align-items(center);
+      margin-bottom: 15px;
+
+      &__ico {
+        margin-right: 8px;
+      }
+
+      &__texto {
+        @include h5;
+        margin: 0;
+      }
+    }
+
+    &__info {
+      font-family: $estc-font-opensans-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: theme-color("gray-darked");
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smooyhing: grayscale;
+      margin-bottom: 40px;
+    }
+  }
+}
