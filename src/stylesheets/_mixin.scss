@@ -229,6 +229,28 @@
   -moz-osx-font-smooyhing: grayscale;
 }
 
+@mixin menu-texto {
+  font-family: $estc-font-opensans-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: theme-color("white");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
+@mixin menu-texto-bold {
+  font-family: $estc-font-opensans-semibold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: theme-color("white");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooyhing: grayscale;
+}
+
 // INPUT
 
 @mixin input-label {
