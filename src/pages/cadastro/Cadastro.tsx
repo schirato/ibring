@@ -25,11 +25,7 @@ const Cadastro = () => {
           <Input type="tel" label="Celular" />
           <Input type="email" label="E-mail" />
           <h5>Crie uma senha de acesso</h5>
-          <Input
-            type="password"
-            label=""
-            className="secaoCadastro__formulario__senha"
-          />
+          <Input type="password" className="secaoCadastro__formulario__senha" />
           <p
             //className="secaoCadastro__formulario__senha__rodape"
             className={clsx(

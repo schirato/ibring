@@ -7,6 +7,9 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import Confirmacao from "./pages/cadastro/Confirmacao";
 import Home from "./pages/home/Home";
 import FaleConosco from "./pages/faleConosco/FaleConosco";
+import Seguro from "./pages/seguro/Seguro";
+import Pagamento from "./pages/pagamento/Pagamento";
+import NovoCartao from "./pages/pagamento/NovoCartao";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -21,6 +24,9 @@ ReactDOM.render(
       <Route exact path="/confirmacao" component={Confirmacao} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/faleconosco" component={FaleConosco} />
+      <Route exact path="/seguro" component={Seguro} />
+      <Route exact path="/pagamento" component={Pagamento} />
+      <Route exact path="/novocartao" component={NovoCartao} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

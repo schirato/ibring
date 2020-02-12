@@ -7,7 +7,7 @@ import "./FaleConosco.scss";
 const FaleConosco = () => {
   return (
     <section id="ibring-faleConosco" className="secaoFaleConosco">
-      <HeaderPq />
+      <HeaderPq titulo="Fale conosco" />
       <div className="secaoFaleConosco__content">
         <div className="secaoFaleConosco__content__label">
           <img

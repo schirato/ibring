@@ -2,7 +2,7 @@ import React from "react";
 import "./Input.scss";
 
 interface Props {
-  label: string;
+  label?: string;
   type: "text" | "password" | "email" | "date" | "file" | "tel";
   placeholder?: string;
   className?: string;

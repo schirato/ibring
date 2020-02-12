@@ -44,4 +44,5 @@ h5 {
   @include h5;
   margin: 0;
   z-index: 5;
+  color: theme-color("gray-darked");
 }

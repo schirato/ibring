@@ -1,0 +1,50 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoNovoCartao {
+
+  &__content {
+    @include mainContentRulers(32px, 24px, 32px, 24px, 100%);
+
+    &__tabs {
+      margin-bottom: 30px;
+    }
+
+    &__form {
+      &__group {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+
+        &__margin {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__buttonPrimary {
+      @include button-primary;
+      margin-top: 130px;
+
+      &--disabled {
+        @include button-primary-disabled;
+      }
+    }
+
+  }
+}
+
+.nav-link {
+  color: theme-color("gray-darked") !important;
+
+  &:active,
+  &:focus,
+  &:visited {
+    color: theme-color("primary");
+  }
+}
+
+.nav-link.active {
+  border-bottom: 2px solid theme-color("primary");
+  color: theme-color("primary") !important;
+}
