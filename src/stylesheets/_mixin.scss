@@ -74,7 +74,7 @@
   @include justify-content(center);
   width: 100%;
   border-radius: 10px !important;
-  font-family: 'OpenSans-Bold', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+  font-family: $estc-font-opensans-semibold;
   font-style: normal;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -132,7 +132,7 @@
   width: 100%;
   box-sizing: border-box;
   border-radius: 10px !important;
-  font-family: 'OpenSans-Bold', 'Roboto', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+  font-family: $estc-font-opensans-semibold;
   font-style: normal;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -141,6 +141,24 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+}
+
+@mixin button-outline {
+  @extend %standardButtonOutline;
+  border: 1px solid theme-color("green-medium");
+  padding: 12px 12px;
+  color: theme-color("green-medium");
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: initial;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+    border-color: theme-color("green-medium") !important;
+    color: theme-color("green-medium") !important;
+  }
 }
 
 @mixin button-secondary-outline {
