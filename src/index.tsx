@@ -11,6 +11,7 @@ import Seguro from "./pages/seguro/Seguro";
 import Pagamento from "./pages/pagamento/Pagamento";
 import NovoCartao from "./pages/pagamento/NovoCartao";
 import Resumo from "./pages/resumo/Resumo";
+import Corrida from "./pages/resumo/Corrida";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route exact path="/pagamento" component={Pagamento} />
       <Route exact path="/novocartao" component={NovoCartao} />
       <Route exact path="/resumo" component={Resumo} />
+      <Route exact path="/corrida" component={Corrida} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

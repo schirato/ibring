@@ -1,0 +1,102 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoCorrida {
+
+  &__content {
+    @include mainContentRulers(32px, 30px, 32px, 30px, 100%);
+
+    &__infoEntrega {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(space-between);
+      margin-top: 15px;
+
+      &__texto {
+        font-family: $estc-font-opensans-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        color: theme-color("green-medium");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smooyhing: grayscale;
+        margin: 0;
+      }
+
+      &__valor {
+        font-family: $estc-font-opensans-semibold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        color: theme-color("green-medium");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smooyhing: grayscale;
+        margin: 0;
+
+        &--alignRight {
+          text-align: right;
+        }
+      }
+    }
+
+    &__tipoEntrega {
+      @include flexbox;
+      @include align-items(center);
+      padding: 15px 0;
+      margin-top: 15px;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.28);
+      border-top: 0.5px solid rgba(0, 0, 0, 0.28);
+
+      &__ico {
+        margin-right: 13px;
+      }
+
+      &__texto {
+        font-family: $estc-font-opensans-semibold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: theme-color("gray-darked");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smooyhing: grayscale;
+        margin: 0;
+      }
+    }
+
+    &__especificacao {
+      @include flexbox;
+      @include justify-content(space-between);
+      margin-top: 30px;
+
+      &__tamanho {
+
+        &__titulo {
+          font-family: $estc-font-opensans-semibold;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          color: theme-color("gray-darked");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+        }
+
+        &__texto {
+          font-family: $estc-font-opensans-regular;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 18px;
+          color: theme-color("gray-darked");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          margin: 0;
+        }
+      }
+
+    }
+  }
+}
