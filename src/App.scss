@@ -1,39 +1,44 @@
-.App {
-  text-align: center;
-}
+@import './stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.secaoApp {
+  @include mainContentRulers(24px, 30px, 24px, 30px, 100%);
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: theme-color-level(primary, -10);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &__logo {
+    margin: 0 auto;
   }
 
-  to {
-    transform: rotate(360deg);
+  &__nota {
+    @include mainContentRulers(8px, 8px, 8px, 8px, 100%);
+    background-color: theme-color("gray-light");
+    border: 1px solid theme-color("primary");
+    border-radius: 10px;
+    margin: 40px 0;
+
+    &__texto {
+      font-family: $estc-font-opensans-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+      color: theme-color("gray-dark");
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smooyhing: grayscale;
+      margin: 0 0 8px;
+
+      span {
+        font-family: $estc-font-opensans-bold;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__link {
+    @include button-outline("primary");
+    text-transform: uppercase;
   }
 }

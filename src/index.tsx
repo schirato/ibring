@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
+import Sumario from "./Sumario";
 import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Confirmacao from "./pages/cadastro/Confirmacao";
@@ -27,6 +28,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
+      <Route exact path="/sumario" component={Sumario} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/cadastro" component={Cadastro} />
       <Route exact path="/confirmacao" component={Confirmacao} />

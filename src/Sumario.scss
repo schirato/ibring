@@ -1,0 +1,50 @@
+@import './stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoSumario {
+
+  &__header {
+    @include mainContentRulers(12px, 24px, 12px, 24px, 100%);
+    background-color: theme-color("white");
+    border-bottom: 1px solid theme-color("gray-dark");
+  }
+
+  &__content {
+    @include mainContentRulers(24px, 30px, 24px, 30px, 100%);
+    @include flexbox;
+    @include flex-direction(column);
+
+    &__h2 {
+      font-family: $estc-font-opensans-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      color: theme-color("gray-darked");
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smooyhing: grayscale;
+      margin: 24px 0;
+    }
+
+    &__link {
+      font-family: $estc-font-opensans-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: theme-color("gray-darked");
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smooyhing: grayscale;
+      margin: 24px 0 0;
+      cursor: pointer;
+      text-align: left;
+
+      &__ico {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
