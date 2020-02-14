@@ -11,7 +11,10 @@ const App = () => {
         <p className="secaoApp__nota__texto">
           <span>*</span> Os layouts podem estar com estilos quebrados por causa
           do bootstrap que esta sendo carregado em todas as páginas/folhas de
-          estilo da aplicação.
+          estilo da aplicação. Procure por{" "}
+          <span>"'~bootstrap/scss/bootstrap';"</span> nos arquivos ".scss". Se
+          inspecionar a página vai ver que tem o mesmo sendo repetido inúmeras
+          vezes. Corrigindo isso resolve.
         </p>
         <p className="secaoApp__nota__texto">
           Não consegui fazer com que ele fosse carregado uma única vez na
