@@ -17,6 +17,7 @@ import Detalhe from "./pages/retirada/Deatlhes";
 import EntregaB from "./pages/entregaB/EntregaB";
 import Acompanhamento from "./pages/acompanhamento/Acompanhamento";
 import Andamento from "./pages/acompanhamento/Andamento";
+import Concluido from "./pages/acompanhamento/Concluido";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -41,6 +42,7 @@ ReactDOM.render(
       <Route exact path="/entregab" component={EntregaB} />
       <Route exact path="/acompanhamento" component={Acompanhamento} />
       <Route exact path="/andamento" component={Andamento} />
+      <Route exact path="/concluido" component={Concluido} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

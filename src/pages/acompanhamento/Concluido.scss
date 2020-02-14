@@ -1,0 +1,257 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoConcluido {
+
+  &__header {
+    @include mainContentRulers(24px, 30px, 24px, 30px, 100%);
+    @include flexbox;
+    @include align-items(center);
+    background-color: theme-color("primary");
+    border-radius: 0 0 15px 15px;
+
+    &__ico {
+      margin-right: 25px;
+    }
+
+    &__titulo {
+      color: theme-color("white");
+      margin: 0;
+    }
+  }
+
+  &__content {
+    height: 100vh;
+    background: url("../../images/bg-map-full.svg") 0 0 repeat;
+
+    &__trajeto {
+      @include mainContentRulers(12px, 24px, 12px, 24px, auto);
+      background-color: theme-color("white");
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      position: relative;
+      z-index: 4;
+
+      &__item {
+        @include flexbox;
+        @include align-items(center);
+        height: 50px;
+
+        &__vector {
+          @include flexbox;
+          @include flex-direction(column);
+          @include align-items(center);
+          @include justify-content(center);
+          padding-top: 20px;
+          position: relative;
+
+          &__bullet {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: theme-color("primary");
+          }
+
+          &__line {
+            position: absolute;
+            display: block;
+            border-right: 1px solid theme-color("primary");
+            width: 1px;
+            margin: 0 10px;
+            bottom: 6px;
+            left: -7px;
+          }
+        }
+
+        &__texto {
+          font-family: $estc-font-opensans-regular;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: theme-color("gray-darked");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          margin: 0 30px 0 10px;
+        }
+
+        &--first {
+          .secaoConcluido {
+            &__content {
+              &__trajeto {
+                &__item {
+                  &__vector {
+                    &__line {
+                      bottom: -20px;
+                      left: -7px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__map {
+      position: relative;
+      z-index: 1;
+
+      &__circle {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background-color: rgba(99, 214, 115, 0.33);
+        position: absolute;
+
+        &--small {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: theme-color("green-medium");
+          z-index: 1;
+        }
+
+        &__texto {
+          @include flexbox;
+          @include align-items(center);
+          font-family: $estc-font-opensans-semibold;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          color: theme-color("white");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          z-index: 2;
+        }
+      }
+
+      &__posicaoA {
+        top: 30px;
+        left: 80px;
+      }
+
+      &__posicaoB {
+        top: 70px;
+        right: 70px;
+      }
+
+      &__line {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        height: 52px;
+        width: 190px;
+        background: url(../../images/img-route.svg) 0 0 no-repeat;
+      }
+    }
+
+    &__rodape {
+      @include mainContentRulers(12px, 24px, 12px, 24px, auto);
+      width: 100%;
+      background-color: theme-color("white");
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      &__linha {
+        border-bottom: 1px solid theme-color("gray-lighten");
+        margin-bottom: 20px;
+
+        &__dados {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(space-between);
+
+          &__titulo {
+            font-family: $estc-font-opensans-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: theme-color("gray-darked");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+            margin: 0;
+          }
+
+          &__valor {
+            font-family: $estc-font-opensans-semibold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: theme-color("gray-darked");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+          }
+
+          &__duracao {
+            .secaoConcluido {
+              &__content {
+                &__rodape {
+                  &__linha {
+                    &__dados {
+
+                      &__titulo,
+                      &__valor {
+                        text-align: right;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &__valorPago {
+            &__texto {
+              font-family: $estc-font-opensans-semibold;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 20px;
+              color: theme-color("gray-darked");
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smooyhing: grayscale;
+            }
+          }
+
+          &__tipoPagamento {
+            &__metodo {
+              &__ico {
+                margin-right: 10px;
+              }
+
+              &__texto {
+                font-family: $estc-font-opensans-regular;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 20px;
+                color: theme-color("gray-darked");
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smooyhing: grayscale;
+              }
+            }
+          }
+        }
+      }
+
+      &__buttonPrimary {
+        @include button-outline("secondary");
+        margin: 24px 0;
+      }
+    }
+
+  }
+}

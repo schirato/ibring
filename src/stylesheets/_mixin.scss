@@ -143,11 +143,11 @@
   cursor: pointer;
 }
 
-@mixin button-outline {
+@mixin button-outline($bgCor: "green-medium") {
   @extend %standardButtonOutline;
-  border: 1px solid theme-color("green-medium");
+  border: 1px solid theme-color($bgCor);
   padding: 12px 12px;
-  color: theme-color("green-medium");
+  color: theme-color($bgCor);
   font-size: 12px;
   line-height: 16px;
   text-transform: initial;
