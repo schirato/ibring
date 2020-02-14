@@ -1,0 +1,142 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoAcompanhamento {
+
+  &__header {
+    @include mainContentRulers(24px, 30px, 24px, 30px, 100%);
+    @include flexbox;
+    @include align-items(center);
+    background-color: theme-color("primary");
+    border-radius: 0 0 15px 15px;
+
+    &__ico {
+      margin-right: 25px;
+    }
+
+    &__titulo {
+      color: theme-color("white");
+      margin: 0;
+    }
+  }
+
+  &__content {
+    height: 100vh;
+    background: url("../../images/bg-map-full.svg") 0 0 repeat;
+
+    &__trajeto {
+      @include mainContentRulers(12px, 24px, 12px, 24px, auto);
+      background-color: theme-color("white");
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      position: relative;
+      z-index: 4;
+
+      &__item {
+        @include flexbox;
+        @include align-items(center);
+        height: 50px;
+
+        &__vector {
+          @include flexbox;
+          @include flex-direction(column);
+          @include align-items(center);
+          @include justify-content(center);
+          padding-top: 20px;
+          position: relative;
+
+          &__bullet {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: theme-color("primary");
+          }
+
+          &__line {
+            position: absolute;
+            display: block;
+            border-right: 1px solid theme-color("primary");
+            width: 1px;
+            margin: 0 10px;
+            bottom: 6px;
+            left: -7px;
+          }
+        }
+
+        &__texto {
+          font-family: $estc-font-opensans-regular;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: theme-color("gray-darked");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          margin: 0 30px 0 10px;
+        }
+
+        &--first {
+          .secaoAcompanhamento {
+            &__content {
+              &__trajeto {
+                &__item {
+                  &__vector {
+                    &__line {
+                      bottom: -20px;
+                      left: -7px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__rodape {
+      @include mainContentRulers(12px, 24px, 12px, 24px, auto);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background-color: theme-color("white");
+
+      &__titulo {
+        color: theme-color("green-medium");
+        margin: 26px 0;
+      }
+
+      &__botao {
+        @include flexbox;
+        @include align-items(center);
+        margin-bottom: 24px;
+
+        &__buttonPrimary {
+          @include button-primary;
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: 600;
+          padding: 10px;
+          border-color: theme-color("green-medium");
+          background-color: theme-color("green-medium");
+          text-transform: none;
+        }
+
+        &__buttonSecondary {
+          @include button-secondary-outline;
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: 600;
+          margin-right: 16px;
+          padding: 10px;
+          color: theme-color("green-medium");
+          border-color: theme-color("green-medium");
+          text-transform: none;
+        }
+      }
+    }
+  }
+}

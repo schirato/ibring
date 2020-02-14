@@ -230,9 +230,9 @@
 @mixin h4 {
   font-family: $estc-font-opensans-semibold;
   font-style: normal;
-  font-weight: 600;
-  font-size: 21px;
-  line-height: 29px;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+  line-height: 29px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smooyhing: grayscale;
 }

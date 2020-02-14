@@ -15,6 +15,8 @@ import Corrida from "./pages/resumo/Corrida";
 import Retirada from "./pages/retirada/Retirada";
 import Detalhe from "./pages/retirada/Deatlhes";
 import EntregaB from "./pages/entregaB/EntregaB";
+import Acompanhamento from "./pages/acompanhamento/Acompanhamento";
+import Andamento from "./pages/acompanhamento/Andamento";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -37,6 +39,8 @@ ReactDOM.render(
       <Route exact path="/retirada" component={Retirada} />
       <Route exact path="/detalhe" component={Detalhe} />
       <Route exact path="/entregab" component={EntregaB} />
+      <Route exact path="/acompanhamento" component={Acompanhamento} />
+      <Route exact path="/andamento" component={Andamento} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

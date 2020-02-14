@@ -6,9 +6,11 @@ interface Props {
   titulo: string;
 }
 
-export const HeaderPq: React.FC<Props> = ({ titulo }) => (
-  <section id="ibring-headerPq" className="secaoHeaderPq">
-    <img src={icoVoltar} className="secaoHeaderPq__ico" alt="icone voltar" />
-    <h4 className="secaoHeaderPq__titulo">{titulo}</h4>
-  </section>
-);
+export const HeaderPq: React.FC<Props> = ({ titulo }) => {
+  return (
+    <section id="ibring-headerPq" className="secaoHeaderPq">
+      <img src={icoVoltar} className="secaoHeaderPq__ico" alt="icone" />
+      <h4 className="secaoHeaderPq__titulo">{titulo}</h4>
+    </section>
+  );
+};

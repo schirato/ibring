@@ -94,7 +94,7 @@
       }
 
       &:hover {
-        .secaoResumo {
+        .secaoEntregaB {
           &__header {
             &__dropdown {
 
@@ -115,5 +115,119 @@
     }
   }
 
-  &__content {}
+  &__content {
+    position: relative;
+    height: 100vh;
+    background: url("../../images/bg-map-full.svg") 0 0 repeat;
+
+    &__trajeto {
+      @include mainContentRulers(12px, 24px, 12px, 24px, auto);
+      background-color: theme-color("white");
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      position: relative;
+      z-index: 4;
+
+      &__item {
+        @include flexbox;
+        @include align-items(center);
+        height: 50px;
+
+        &__posicao {
+          width: 23px;
+          height: 19px;
+          border-radius: 50%;
+          background-color: theme-color("green-medium");
+          font-family: $estc-font-opensans-semibold;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          color: theme-color("white");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          text-align: center;
+          margin-right: 12px;
+
+          &--disabled {
+            background-color: theme-color("gray-lighten");
+          }
+        }
+
+        &__vector {
+          @include flexbox;
+          @include flex-direction(column);
+          @include align-items(center);
+          @include justify-content(center);
+          padding-top: 20px;
+          position: relative;
+
+          &__bullet {
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: theme-color("green-medium");
+
+            &--disabled {
+              background-color: theme-color("gray-lighten");
+            }
+          }
+
+          &__line {
+            position: absolute;
+            display: block;
+            border-right: 1px solid theme-color("green-medium");
+            width: 1px;
+            margin: 0 10px;
+            bottom: 5px;
+            left: -8px;
+          }
+        }
+
+        &__texto {
+          font-family: $estc-font-opensans-regular;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: theme-color("gray-dark");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          margin: 0 30px 0 10px;
+          width: 300px;
+
+          &__novoDestino {
+            font-family: $estc-font-opensans-semibold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+            color: theme-color("green-medium");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+            margin: 0 30px 0 10px;
+            width: 300px;
+          }
+        }
+
+        &--first {
+          .secaoEntregaB {
+            &__content {
+              &__trajeto {
+                &__item {
+                  &__vector {
+                    &__line {
+                      bottom: -24px;
+                      left: -8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

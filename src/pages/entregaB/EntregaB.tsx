@@ -3,7 +3,7 @@ import icoMenu from "../../images/ico-menu-white.svg";
 import icoMenuMoto from "../../images/ico-menu-scooter.svg";
 import icoMenuCarro from "../../images/ico-menu-car.svg";
 import icoMenuChevron from "../../images/ico-chevron-down.svg";
-import icoChevron from "../../images/ico-chevron-right.svg";
+import icoMais from "../../images/ico-plus.svg";
 import icoEdit from "../../images/ico-edit.svg";
 import "./EntregaB.scss";
 
@@ -48,7 +48,53 @@ const EntregaB = () => {
           </div>
         </div>
       </header>
-      <div className="secaoEntregaB__content"></div>
+      <div className="secaoEntregaB__content">
+        <div className="secaoEntregaB__content__trajeto">
+          <div className="secaoEntregaB__content__trajeto__item secaoEntregaB__content__trajeto__item--first">
+            <span className="secaoEntregaB__content__trajeto__item__posicao secaoEntregaB__content__trajeto__item__posicao--disabled">
+              A
+            </span>
+            <p className="secaoEntregaB__content__trajeto__item__vector">
+              <span className="secaoEntregaB__content__trajeto__item__vector__bullet secaoEntregaB__content__trajeto__item__vector__bullet--disabled">
+                &nbsp;
+              </span>
+              <span className="secaoEntregaB__content__trajeto__item__vector__line">
+                &nbsp;
+              </span>
+            </p>
+            <p className="secaoEntregaB__content__trajeto__item__texto">
+              Avenida das Américas, 4200 Barra da Tijuca, Rio de Janeiro, 213452
+              Brasil
+            </p>
+            <img
+              src={icoEdit}
+              className="secaoEntregaB__content__trajeto__item__ico"
+              alt="icone edit"
+            />
+          </div>
+          <div className="secaoEntregaB__content__trajeto__item">
+            <span className="secaoEntregaB__content__trajeto__item__posicao">
+              B
+            </span>
+            <p className="secaoEntregaB__content__trajeto__item__vector">
+              <span className="secaoEntregaB__content__trajeto__item__vector__bullet">
+                &nbsp;
+              </span>
+              <span className="secaoEntregaB__content__trajeto__item__vector__line">
+                &nbsp;
+              </span>
+            </p>
+            <p className="secaoEntregaB__content__trajeto__item__texto secaoEntregaB__content__trajeto__item__texto__novoDestino">
+              Adicione o próximo destino
+            </p>
+            <img
+              src={icoMais}
+              className="secaoEntregaB__content__trajeto__item__ico"
+              alt="icone edit"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
