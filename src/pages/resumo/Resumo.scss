@@ -34,6 +34,7 @@
         @include flexbox;
         @include align-items(center);
         width: 270px;
+        position: relative;
         background-color: theme-color("green-medium");
         border: none;
         border-radius: 10px;

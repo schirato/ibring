@@ -1,4 +1,5 @@
 import React from "react";
+import icoAlert from "../../../images/ico-red-alert.svg";
 import "./Input.scss";
 
 interface Props {
@@ -8,6 +9,8 @@ interface Props {
   className?: string;
   classInputField?: string;
   maxLength?: number;
+  showError?: boolean;
+  errorMensage?: string;
 }
 
 export const Input: React.FC<Props> = ({
@@ -16,7 +19,9 @@ export const Input: React.FC<Props> = ({
   placeholder,
   className,
   maxLength,
-  classInputField
+  classInputField,
+  showError,
+  errorMensage
 }) => (
   <section id="ibring-input" className={`${className} input`}>
     <div className="form-group">
@@ -29,6 +34,16 @@ export const Input: React.FC<Props> = ({
         placeholder={placeholder}
         maxLength={maxLength}
       />
+      {showError && (
+        <p className="input__errorMensage">
+          <img
+            src={icoAlert}
+            alt="ico alerta"
+            className="input__errorMensage__ico"
+          />
+          <span className="input__errorMensage__texto">{errorMensage}</span>
+        </p>
+      )}
     </div>
   </section>
 );

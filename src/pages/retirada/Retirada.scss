@@ -1,0 +1,235 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoRetirada {
+
+  &__header {
+    @include mainContentRulers(20px, 24px, 20px, 24px, 100%);
+    background-color: theme-color("primary");
+
+    &__top {
+      @include flexbox;
+      @include align-items(center);
+
+      &__ico {
+        margin-right: 30px;
+      }
+
+      &__titulo {
+        @include h5;
+        color: theme-color("white");
+        margin: 0;
+      }
+    }
+
+    &__dropdown {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      padding-left: 55px;
+      margin-top: 10px;
+
+      &__btn {
+        @include mainContentRulers(8px, 12px, 8px, 12px, 100%);
+        @include flexbox;
+        @include align-items(center);
+        position: relative;
+        width: 270px;
+        background-color: theme-color("green-medium");
+        border: none;
+        border-radius: 10px;
+        font-family: $estc-font-opensans-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: theme-color("white");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smooyhing: grayscale;
+        cursor: pointer;
+
+        &__ico {
+          margin-right: 16px;
+        }
+
+        &__arrow {
+          position: absolute;
+          right: 24px;
+          top: 16px;
+        }
+
+        &:hover {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      &__content {
+        @include mainContentRulers(0, 12px, 12px, 12px, 100%);
+        display: none;
+        position: absolute;
+        top: 41px;
+        background-color: theme-color("green-medium");
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 270px;
+        z-index: 1;
+
+        &__divisor {
+          height: 1px;
+          border-top: 1px solid theme-color("white");
+          margin-bottom: 12px;
+        }
+
+        &__item {
+          font-family: $estc-font-opensans-regular;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 19px;
+          color: theme-color("white");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+        }
+      }
+
+      &:hover {
+        .secaoResumo {
+          &__header {
+            &__dropdown {
+
+              &__btn {
+                &__arrow {
+                  transform: rotate(180deg);
+                }
+              }
+
+              &__content {
+                display: block;
+                z-index: 9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: 100vh;
+    background: url("../../images/bg-map-full.svg") 0 0 repeat;
+
+    &__pesquisa {
+      @include mainContentRulers(0, 24px, 0, 24px, auto);
+      background-color: theme-color("white");
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      &__endereco {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+
+        &__posicao {
+          height: 21px;
+          width: 23px;
+          border-radius: 50%;
+          background-color: theme-color("green-medium");
+          padding-top: 2px;
+          margin: 4px 0 0;
+
+          &__texto {
+            font-family: $estc-font-opensans-semibold;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+            color: theme-color("white");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+            text-align: center;
+            display: block;
+          }
+        }
+
+
+        &__input {
+          width: 100%;
+          margin-left: 30px;
+        }
+      }
+
+      &__complemento {
+        @include mainContentRulers(0, 0, 0, 50px, auto);
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        margin-top: -20px;
+
+        &__inputComplemento {
+          width: 120px;
+        }
+
+        &__btnAvancar {
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
+          font-family: $estc-font-opensans-semibold;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          color: theme-color("green-medium");
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smooyhing: grayscale;
+          text-align: right;
+          margin: 0;
+
+          &__ico {
+            margin-left: 10px;
+          }
+        }
+      }
+
+    }
+
+    &__resultado {
+      @include mainContentRulers(24px, 24px, 24px, 24px, auto);
+      background-color: theme-color("white");
+      border-top: 5px solid theme-color("gray-light");
+
+      &__lista {
+
+
+        &__linha {
+          border-bottom: 1px solid theme-color("gray-lighten");
+          margin-bottom: 12px;
+
+          &__texto {
+            font-family: $estc-font-opensans-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: theme-color("gary-darked");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+            margin: 0 0 0 50px;
+          }
+
+          &__subTexto {
+            font-family: $estc-font-opensans-regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: theme-color("gray-dark");
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smooyhing: grayscale;
+            margin: 0 0 12px 50px;
+          }
+        }
+      }
+    }
+  }
+}

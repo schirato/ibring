@@ -12,6 +12,9 @@ import Pagamento from "./pages/pagamento/Pagamento";
 import NovoCartao from "./pages/pagamento/NovoCartao";
 import Resumo from "./pages/resumo/Resumo";
 import Corrida from "./pages/resumo/Corrida";
+import Retirada from "./pages/retirada/Retirada";
+import Detalhe from "./pages/retirada/Deatlhes";
+import EntregaB from "./pages/entregaB/EntregaB";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -31,6 +34,9 @@ ReactDOM.render(
       <Route exact path="/novocartao" component={NovoCartao} />
       <Route exact path="/resumo" component={Resumo} />
       <Route exact path="/corrida" component={Corrida} />
+      <Route exact path="/retirada" component={Retirada} />
+      <Route exact path="/detalhe" component={Detalhe} />
+      <Route exact path="/entregab" component={EntregaB} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

@@ -1,0 +1,60 @@
+@import '../../stylesheets/common';
+@import '~bootstrap/scss/bootstrap';
+
+.secaoDetalhe {
+
+  &__header {
+    @include mainContentRulers(20px, 24px, 20px, 24px, 100%);
+    background-color: theme-color("primary");
+
+    &__top {
+      @include flexbox;
+      @include align-items(center);
+
+      &__ico {
+        margin-right: 30px;
+      }
+
+      &__titulo {
+        @include h5;
+        color: theme-color("white");
+        margin: 0;
+      }
+    }
+
+    &__endereco {
+      @include mainContentRulers(8px, 12px, 8px, 12px, 100%);
+      min-width: 270px;
+      background-color: theme-color("green-medium");
+      border: none;
+      border-radius: 10px;
+      margin-left: 50px;
+      margin-top: 20px;
+
+      &__texto {
+        font-family: $estc-font-opensans-regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        color: theme-color("white");
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smooyhing: grayscale;
+        margin: 0;
+      }
+    }
+  }
+
+  &__content {
+    @include mainContentRulers(32px, 24px, 32px, 24px, auto);
+
+    &__buttonPrimary {
+      @include button-primary;
+      margin-top: 40px;
+
+      &--disabled {
+        @include button-primary-disabled;
+      }
+    }
+  }
+}

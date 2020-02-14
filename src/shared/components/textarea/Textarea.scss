@@ -1,7 +1,7 @@
 @import '../../../stylesheets/common';
 @import '~bootstrap/scss/bootstrap';
 
-.input {
+.textarea {
 
   &__label {
     @include input-label;
@@ -9,26 +9,17 @@
 
   &__field {
     @include input-field;
-  }
+    min-height: 116px;
+    resize: none;
 
-  &__errorMensage {
-    @include flexbox;
-    @include align-items(center);
-
-    &__texto {
+    &::placeholder {
       font-family: $estc-font-opensans-regular;
       font-style: normal;
       font-weight: normal;
-      font-size: 12px;
-      line-height: 16px;
-      color: theme-color("danger");
+      font-size: 13px;
+      line-height: 18px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smooyhing: grayscale;
-      margin: 8px 0 0;
-    }
-
-    &__ico {
-      margin: 4px 8px 0 0;
     }
   }
 }
